@@ -10,6 +10,8 @@ level = 'high'
 
 //arrays
 let numbers: number[] = [1,2,3]
+//tuples
+let user: [number, string] = [1, 'Mosh']
 
 
 const TSPracticeVideo = () => {
@@ -21,8 +23,13 @@ const TSPracticeVideo = () => {
       <p>{course}</p>
       <p>{is_published ? 'published' : 'not published'}</p>
       <p>{render(level)}</p>
+
       {/* ======arrays====== */}
-      {numbers.map(num => <p>{num}</p>)}
+      {numbers.map(num => <p key={num}>{num}</p>)}
+
+      {/* ======tuples====== */}
+            <p>{`USER: ${user[1]} ID: ${user[0]}`}</p>
+
 
     </div>
   )
