@@ -22,6 +22,12 @@ let mySize: Size = Size.Medium
 enum Cola {PEPSI = 'Pepsi', COKE = 'COKE', RC_COLA = 'RC Cola'}
 let myCola: Cola = Cola.PEPSI
 
+//functions
+const logName = (name: string): void => console.log(name)
+logName(user[1])
+
+const addNum = (num1: number, num2?: number): number => num2 ? num1 + num2 : num1
+
 const TSPracticeVideo = () => {
   return (
     <div>
@@ -44,6 +50,10 @@ const TSPracticeVideo = () => {
         <hr /><h2>ENUMS</h2>
         <p>My shirt-size: {mySize}</p>
         <p>my cola: {myCola}</p>
+
+        <hr /><h2>Functions</h2>
+        <p>{addNum(10_000,1_234)}</p>
+        <p>{addNum(10_000)}</p>
     </div>
   )
 }
