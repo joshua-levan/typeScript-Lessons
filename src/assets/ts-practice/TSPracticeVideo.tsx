@@ -13,7 +13,14 @@ let numbers: number[] = [1,2,3]
 //tuples
 let user: [number, string] = [1, 'Mosh']
 //tuple arrays
-let users: [number, string][] = [[1, 'Mosh']]
+let users: [number, string][] = [[1, 'Mosh'], [2, 'Josh']]
+
+//enums-- **'const enum' will compile more optimized js
+enum Size {Small = 1, Medium, Large}
+let mySize: Size = Size.Medium
+
+enum Cola {PEPSI = 'Pepsi', COKE = 'COKE', RC_COLA = 'RC Cola'}
+let myCola: Cola = Cola.PEPSI
 
 const TSPracticeVideo = () => {
   return (
@@ -25,14 +32,18 @@ const TSPracticeVideo = () => {
       <p>{is_published ? 'published' : 'not published'}</p>
       <p>{render(level)}</p>
 
-      <h2>ARRAYS</h2>
+      <hr /><h2>ARRAYS</h2>
       {numbers.map(num => <p key={num}>{num}</p>)}
 
-      <h2>TUPLES</h2>
+      <hr /><h2>TUPLES</h2>
             <p>{`USER: ${user[1]} ID: ${user[0]}`}</p>
 
-      <h2>TUPLE ARRAYS</h2>
+      <hr /><h2>TUPLE ARRAYS</h2>
+        {users.map(user => <p key={user[0]}>{`USER: ${user[1]} ID: ${user[0]}`}</p>)}
 
+        <hr /><h2>ENUMS</h2>
+        <p>My shirt-size: {mySize}</p>
+        <p>my cola: {myCola}</p>
     </div>
   )
 }
