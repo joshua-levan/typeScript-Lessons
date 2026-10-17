@@ -4,12 +4,12 @@ let course: string = 'TypeScript';
 let is_published: boolean =true;
 let level;
 
-const render = (level: any) => level
+const render = (level: string) => level
 
-level = 2
+level = 'high'
 
 //arrays
-let numbers = [1,2,'3']
+let numbers: number[] = [1,2,3]
 
 
 const TSPracticeVideo = () => {
@@ -22,6 +22,7 @@ const TSPracticeVideo = () => {
       <p>{is_published ? 'published' : 'not published'}</p>
       <p>{render(level)}</p>
       {/* ======arrays====== */}
+      {numbers.map(num => <p>{num}</p>)}
 
     </div>
   )
