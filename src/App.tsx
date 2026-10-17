@@ -6,8 +6,10 @@ import TSPracticeVideo from "./assets/ts-practice/TSPracticeVideo"
 const App = () => {
   return (
     <>
+    {/* ==========COUNTER=========== */}
       {/* <TSExample /> */}
       {/* <TSPractice/> */}
+    {/* ==========TS MOSH VIDEO=========== */}
       <TSPracticeVideo />
     </>
   )
