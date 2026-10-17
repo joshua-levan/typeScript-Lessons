@@ -1,13 +1,3 @@
-// basic types
-let sales: number = 123_456_789;
-let course: string = 'TypeScript';
-let is_published: boolean =true;
-let level;
-
-const render = (level: string) => level
-
-level = 'high'
-
 //arrays
 let numbers: number[] = [1,2,3]
 //tuples
@@ -64,9 +54,14 @@ const kgtoLbs = (weight: number | string): number => typeof weight === 'number'?
 type Draggable = {
   drag: () => void
 }
-
 type Resizable = {
   resize: () => void
+}
+type UIWidget = Draggable & Resizable
+
+let textbox: UIWidget = {
+  drag: () => {},
+  resize: () => {}
 }
 
 const TSPracticeVideo = () => {
