@@ -31,7 +31,7 @@ const reducer = (state: any = initialState, action: any) => {
   }
 }
 
-const TSPractice = () => {
+const TSCounter = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
   const denomination: number = 10
 
@@ -46,4 +46,4 @@ const TSPractice = () => {
   )
 }
 
-export default TSPractice
+export default TSCounter

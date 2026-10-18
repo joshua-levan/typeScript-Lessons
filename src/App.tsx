@@ -1,5 +1,5 @@
-import TSExample from "./assets/counter/TSExample"
-import TSPractice from "./assets/counter/TSPractice"
+import TSExample from "./assets/TSExample"
+import TSCounter from "./assets/counter/TSCounter"
 import TSPracticeVideo from "./assets/ts-practice/TSPracticeVideo"
 
 
@@ -8,9 +8,9 @@ const App = () => {
     <>
     {/* ==========COUNTER=========== */}
       {/* <TSExample /> */}
-      {/* <TSPractice/> */}
+      <TSCounter/>
     {/* ==========TS MOSH VIDEO=========== */}
-      <TSPracticeVideo />
+      {/* <TSPracticeVideo /> */}
     </>
   )
 }
