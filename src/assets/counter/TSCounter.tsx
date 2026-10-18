@@ -12,11 +12,16 @@ enum Actions {
   INCREMENT_BY = "INCREMENT_BY",
   RESET = "RESET"
 }
+
+interface Action {
+  type: string,
+  payload?: number
+}
 const { DECREMENT, INCREMENT, INCREMENT_BY, RESET } = Actions
 
-const actionCreator = (type: string, payload?:number): object => ({type, payload})
+const actionCreator = (type: string, payload?:number): Action => ({type, payload})
 
-const reducer = (state: any = initialState, action: any) => {
+const reducer = (state: any = initialState, action: Action) => {
   switch(action.type){
     case DECREMENT:
       return {...state, count: state.count - 1}
