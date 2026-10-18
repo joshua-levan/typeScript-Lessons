@@ -1,4 +1,4 @@
-import { act, useReducer } from 'react'
+import { useReducer } from 'react'
 
     interface InitialState {
         count:number
@@ -34,10 +34,17 @@ import { act, useReducer } from 'react'
     }
 
 const TSCounterPractice = () => {
-
+    const [state, dispatch] = useReducer(reducer, initialState)
+    const incrementBy = 23
 
   return (
-    <div>TSCounterPractice</div>
+    <div>
+        <div>{state.count}</div>
+        <button onClick={()=>dispatch(actionCreator(DECREMENT))}>-</button>
+        <button onClick={()=>dispatch(actionCreator(INCREMENT))}>+</button>
+        <button onClick={()=>dispatch(actionCreator(INCREMENT_BY, incrementBy))}>+{incrementBy}</button>
+        <button onClick={()=>dispatch(actionCreator(RESET))}>RESET</button>
+    </div>
   )
 }
 
