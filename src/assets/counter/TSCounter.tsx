@@ -21,14 +21,14 @@ const { DECREMENT, INCREMENT, INCREMENT_BY, RESET } = Actions
 
 const actionCreator = (type: string, payload?:number): Action => ({type, payload})
 
-const reducer = (state: any = initialState, action: Action) => {
+const reducer = (state: Count = initialState, action: Action):Count => {
   switch(action.type){
     case DECREMENT:
       return {...state, count: state.count - 1}
     case INCREMENT:
       return {...state, count: state.count + 1}
     case INCREMENT_BY:
-      return {...state, count: state.count + action.payload}
+      return {...state, count: state.count + (action.payload ?? 0)}
     case RESET:
       return initialState
     default:
