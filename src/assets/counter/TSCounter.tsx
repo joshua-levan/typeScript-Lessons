@@ -1,7 +1,7 @@
 import { useReducer } from 'react'
 
 interface Count {
-  count: number
+  count: number;
 }
 
 const initialState: Count = {count:0}
@@ -14,8 +14,8 @@ enum Actions {
 }
 
 interface Action {
-  type: string,
-  payload?: number
+  type: string;
+  payload?: number;
 }
 const { DECREMENT, INCREMENT, INCREMENT_BY, RESET } = Actions
 

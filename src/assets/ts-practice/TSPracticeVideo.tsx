@@ -1,5 +1,5 @@
 //arrays
-let numbers: number[] = [1,2,3]
+// let numbers: number[] = [1,2,3]
 //tuples
 let user: [number, string] = [1, 'Mosh']
 //tuple arrays
@@ -51,18 +51,18 @@ const emoloyeeJosh: Employee = {
 const kgtoLbs = (weight: number | string): number => typeof weight === 'number'? weight * 2.2 : parseInt(weight) * 2.2
 
 //intersection
-type Draggable = {
-  drag: () => void
-}
-type Resizable = {
-  resize: () => void
-}
-type UIWidget = Draggable & Resizable
+// type Draggable = {
+//   drag: () => void
+// }
+// type Resizable = {
+//   resize: () => void
+// }
+// type UIWidget = Draggable & Resizable
 
-let textbox: UIWidget = {
-  drag: () => {},
-  resize: () => {}
-}
+// let textbox: UIWidget = {
+//   drag: () => {},
+//   resize: () => {}
+// }
 
 const TSPracticeVideo = () => {
   return (
