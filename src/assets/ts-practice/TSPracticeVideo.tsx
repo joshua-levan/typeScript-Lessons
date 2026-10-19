@@ -64,6 +64,13 @@ const kgtoLbs = (weight: number | string): number => typeof weight === 'number'?
 //   resize: () => {}
 // }
 
+//literals
+type Quantity = 50 | 100
+let quatity: Quantity = 100
+
+type Metric = 'cm' | 'inch'
+let metric: Metric = 'inch'
+
 const TSPracticeVideo = () => {
   return (
     <div>
@@ -91,6 +98,9 @@ const TSPracticeVideo = () => {
 
         <hr /><h2>Unions and narrowing</h2>
         <p>23kg is {kgtoLbs('23kg')}lbs</p>
+
+        <hr /><h2>Literals</h2>
+        <p>Quantity: {quatity} Metric: {metric}</p>
 
     </div>
     
