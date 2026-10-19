@@ -74,6 +74,14 @@ let metric: Metric = 'inch'
 //Nullable Types
 const greet = (name: string | null | undefined): string => name ? name.toUpperCase() : '¡Hola!'
 
+//Optional Chaining
+type Customer = {
+  birthday?: Date
+}
+const getCustomer = (id?: number): Customer | null | undefined => !id ? null : {birthday: new Date()}
+let customer = getCustomer(1)
+
+
 const TSPracticeVideo = () => {
   return (
     <div>
@@ -107,6 +115,9 @@ const TSPracticeVideo = () => {
 
         <hr /><h2>Nullable Types</h2>
         <p>{greet(null)}</p>
+
+        <hr /><h2>Optional Chaining</h2>
+        <p>Customer Birthday: {customer?.birthday?.toLocaleDateString() ?? 'Unknown'}</p>
     </div>
     
   )
