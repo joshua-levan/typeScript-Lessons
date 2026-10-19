@@ -71,6 +71,9 @@ let quatity: Quantity = 100
 type Metric = 'cm' | 'inch'
 let metric: Metric = 'inch'
 
+//Nullable Types
+const greet = (name: string | null | undefined): string => name ? name.toUpperCase() : '¡Hola!'
+
 const TSPracticeVideo = () => {
   return (
     <div>
@@ -102,6 +105,8 @@ const TSPracticeVideo = () => {
         <hr /><h2>Literals</h2>
         <p>Quantity: {quatity} Metric: {metric}</p>
 
+        <hr /><h2>Nullable Types</h2>
+        <p>{greet(null)}</p>
     </div>
     
   )
